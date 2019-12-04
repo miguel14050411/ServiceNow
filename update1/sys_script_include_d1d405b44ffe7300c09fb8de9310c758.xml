@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.MostrarServerFiltradoModificarByname32BCR</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>MostrarServerFiltradoModificarByname32BCR</name>
+        <script><![CDATA[var MostrarServerFiltradoModificarByname32BCR = Class.create();
+MostrarServerFiltradoModificarByname32BCR.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	listarServer:function(){
+		
+		
+		
+		try {
+			var arrayValue = [];
+			var text_body = this.getParameter('sysparm_JSON_data');
+			var searchQuery = encodeURIComponent(text_body);
+		var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'MostrarServerbyNameBCR32');
+			
+			r.setStringParameterNoEscape('serverName', searchQuery);
+			
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			
+			var valueGet = JSON.parse(responseBody);
+			var ServerName = valueGet.server[0].name;
+			var ipAddress = valueGet.server[0].ipaddress;
+			var comments = valueGet.server[0].comment;
+			//	var Puerto = valueGet.server[0].port;
+			
+			arrayValue.push(ServerName,ipAddress,comments);
+			
+			return arrayValue.toString();
+		}
+		catch(ex) {
+			var message = ex.message;
+		}
+		
+		
+		
+	},
+	
+	type: 'MostrarServerFiltradoModificarByname32BCR'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-19 20:42:00</sys_created_on>
+        <sys_id>d1d405b44ffe7300c09fb8de9310c758</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>MostrarServerFiltradoModificarByname32BCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_d1d405b44ffe7300c09fb8de9310c758</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-19 21:15:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

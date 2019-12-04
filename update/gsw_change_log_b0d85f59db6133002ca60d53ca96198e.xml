@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_change_log">
+    <gsw_change_log action="INSERT_OR_UPDATE">
+        <change_date>2019-05-20 17:21:13</change_date>
+        <changed_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</changed_by>
+        <content display_value="Create MID User">a477d47ac35312007bf1bea192d3ae52</content>
+        <related_change_log_entry/>
+        <related_task_entry/>
+        <sys_class_name>gsw_change_log</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-20 17:21:13</sys_created_on>
+        <sys_id>b0d85f59db6133002ca60d53ca96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2019-05-20 17:21:13</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>gsw_change_log_b0d85f59db6133002ca60d53ca96198e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-20 17:21:13</sys_updated_on>
+        <type>7</type>
+    </gsw_change_log>
+</record_update>

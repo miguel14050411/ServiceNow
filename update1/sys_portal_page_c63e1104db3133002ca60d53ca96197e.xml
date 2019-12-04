@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-08-19 22:08:53">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout display_value="layout_2_across">f6defafa0a0a0b12000d5016bd12ff06</layout>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-28 21:28:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c63e1104db3133002ca60d53ca96197e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>catalog_granjas_telecom</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_portal_page_c63e1104db3133002ca60d53ca96197e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-28 21:28:50</sys_updated_on>
+        <title>catalog_granjas_telecom</title>
+        <user/>
+        <view>catalog_granjas_telecom</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>0</offset>
+                <page display_value="catalog_granjas_telecom">c63e1104db3133002ca60d53ca96197e</page>
+                <summary/>
+                <sys_created_by>admin</sys_created_by>
+                <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                <sys_id>616018d54f57f300c09fb8de9310c740</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>admin</sys_updated_by>
+                <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>render_title</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>616018d54f57f300c09fb8de9310c741</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>catalog</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>656018d54f57f300c09fb8de9310c741</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>6d1e1904db3133002ca60d53ca9619fe</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>macro</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>696018d54f57f300c09fb8de9310c740</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>sc_catalog_homepage_category_list</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_link_class</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>696018d54f57f300c09fb8de9310c741</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>category_title_link</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>6d6018d54f57f300c09fb8de9310c740</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>com.glideapp.servicecatalog.RenderCategory</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_link</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>6d6018d54f57f300c09fb8de9310c741</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>com.glideapp.servicecatalog_category_view.do?v=1&amp;amp;sysparm_parent=a913ed08db3133002ca60d53ca9619ff&amp;amp;sysparm_catalog=6d1e1904db3133002ca60d53ca9619fe&amp;amp;sysparm_catalog_view=catalog_granjas_telecom</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>716018d54f57f300c09fb8de9310c742</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>categoria de Solicitud de Telecomunicaciones </value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>e16018d54f57f300c09fb8de9310c740</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>a913ed08db3133002ca60d53ca9619ff</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>f56018d54f57f300c09fb8de9310c742</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>category</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>catalog_view</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>f96018d54f57f300c09fb8de9310c742</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>catalog_granjas_telecom</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 14/08/2019 07:35:26 PM">616018d54f57f300c09fb8de9310c740</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2019-08-15 02:35:26</sys_created_on>
+                        <sys_id>fd6018d54f57f300c09fb8de9310c742</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2019-08-15 02:35:26</sys_updated_on>
+                        <value>c63e1104db3133002ca60d53ca96197e</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

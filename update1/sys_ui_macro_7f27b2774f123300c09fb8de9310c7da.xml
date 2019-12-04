@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>MostrarPersistenciaBCR</name>
+        <scoped_name>x_287988_bcr_app_MostrarPersistenciaBCR</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 16:06:33</sys_created_on>
+        <sys_id>7f27b2774f123300c09fb8de9310c7da</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>MostrarPersistenciaBCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_7f27b2774f123300c09fb8de9310c7da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-04 20:23:24</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<h3>
+  Perfiles de Persistencia
+  <small class="text-muted">Información a buscar de cada Persistence Group</small>
+</h3>
+	
+<input  id="myInput" onkeyup="myFunction()" class="form-control" type="text" placeholder="Buscar Perfiles de Persistencia" title="verificar información"/>	
+	
+	
+<p id="demo"></p>
+	
+	<script>
+
+		// VER SERVICE POOLS
+		var myObj = "";
+		var vsName = "";
+	
+		var ga = new GlideAjax('MostrarPersistencegroup32Include');
+		ga.addParam('sysparm_name', 'listarPG');
+		//ga.addParam('sysparm_JSON_data',jsonStructure);
+		
+		ga.getXML(HelloWorldParse); 
+		
+		function HelloWorldParse(response) {
+		var answer1 =  response.responseXML.documentElement.getAttribute("answer");
+		//alert(answer1);
+		//var obj = answer1.replace(/\\/g, "");
+		//console.log(obj);
+		
+		debugger;
+	
+		// start by defining the html table with desired style...
+
+	var strTable = '<table id="table" style="align:center; border-collapse: collapse;" class="table table-striped">';
+		
+		// add header rows
+
+		strTable += '<tr><th>Resource Group Name</th><th>Protocol</th><th>Effective State</th><th>Status</th></tr>';
+
+
+		
+		// parse JSON and put results into table
+
+		var parsedResults = JSON.parse(answer1).lbgroup;
+		//alert(parsedResults);
+		
+		
+		
+		for (var i = 0; i &lt; parsedResults.length; i++) {
+
+         strTable += '<tr>';
+
+         strTable += '<td>' + parsedResults[i].name + '</td>';
+		//vsName = parsedResults[i].name;
+
+         strTable += '<td>' + parsedResults[i].persistencetype + '</td>';
+
+         strTable += '<td>' + parsedResults[i].backuppersistencetimeout + '</td>';
+
+         strTable += '<td>' + parsedResults[i].state + '</td>';
+
+         strTable += '</tr>';
+
+}         
+		
+		
+strTable += '</table>';
+
+// then set value to the dynamic table string
+
+g_form.setValue('variable', strTable);
+		$j('#demo').append(strTable);
+		
+		
+		
+			}//fin function principal
+
+		//llave
+
+   $j("#table").click(function(){
+   $j(this).addClass('selected').siblings().removeClass('selected');    
+   var value=$(this).find('td:first').html();
+   //alert(value);    
+});
+
+$j('.ok').on('click', function(e){
+    //alert($("#table tr.selected td:first").html());
+});
+	
+		
+	
+		
+		
+			function myFunction() {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#table tbody").rows;
+    
+    for (var i = 0; i &lt; rows.length; i++) {
+		debugger;
+        var nombre = rows[i].cells[0].textContent.toUpperCase();
+		var protocol = rows[i].cells[1].textContent.toUpperCase();
+        if (nombre.indexOf(filter) > -1 || protocol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+		
+		
+	
+	
+	</script>
+	
+	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.ConsultarGranja</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ConsultarGranja</name>
+        <script><![CDATA[var ConsultarGranja = Class.create();
+ConsultarGranja.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	llamarGranja:function(){
+		
+		
+
+
+var array = [];
+var ServiceGroupname = "";
+servidoresenServiceGroup= [];
+var finIP = "";
+var virtualName = "";
+var PuertoServer = "";
+
+
+ var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'ConsultaGranjaBCR');
+
+	//r.setRequestBody(jsonString);
+	r.setStringParameter("serverName","VS_virtualGranjaBCR_80");
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+var arrayValue= JSON.parse(responseBody).lbvserver_binding;
+//var arrayServers = JSON.parse(responseBody).lbvserver_servicegroupmember_binding;
+
+
+
+for(var i = 0; i < arrayValue.length; i++ ){
+
+ServiceGroupname  = arrayValue[i].lbvserver_servicegroup_binding[i].servicegroupname;
+virtualName = arrayValue[i].lbvserver_servicegroup_binding[i].name;
+
+var arrayValues2 = arrayValue[i].lbvserver_servicegroupmember_binding;
+
+for(var j = 0; j < arrayValues2.length; j++ ){
+
+finIP = arrayValues2[j].ipv46;
+PuertoServer = arrayValues2[j].port;
+array.push(finIP,PuertoServer);
+
+}
+
+gs.info("Información de la granja:  1- VirtualServer: "+virtualName +"   2- ServiceGroup: "+ServiceGroupname +"    IP's de Servidores: "+ array.toString() );
+
+return(virtualName+","+ServiceGroupname+","+array.toString());
+	// con un split lo saco de los arrays
+}		
+		
+		
+	},
+
+    type: 'ConsultarGranja'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-09 21:19:34</sys_created_on>
+        <sys_id>96c715234f03b300c09fb8de9310c7f6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ConsultarGranja</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_96c715234f03b300c09fb8de9310c7f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-09 21:43:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

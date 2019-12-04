@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Virtual Servers BCR">3105d62cdb7573002ca60d53ca961963</cat_item>
+        <cat_variable>IO:9f74c455db4e73002ca60d53ca9619a3</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>cargarServiceGroupOnVS</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	if (isLoading || newValue == '') {
+		return;
+	}
+	
+	//Type appropriate comment here, and begin script below
+	var tipoSolicitud = g_form.getValue('tipo_de_solicitud');
+	
+	if(tipoSolicitud == "Crear Virtual Servers"){
+		alert("si");
+		
+		
+		// VALIDAR SI NO ME TRAE DATOS VERIFICAR EL OTRO 32
+		
+		var instanciaPrimaria = g_form.getValue('instancia_primaria_bcr');
+		
+		if(instanciaPrimaria == "172.21.72.30"){
+			
+			//switch
+			var gaa = new GlideAjax('MostrarServiceGroupBCR30ScrtpInclude');
+			gaa.addParam('sysparm_name', 'serviceGroupList');
+			gaa.getXML(BCRParse30);
+			
+			
+			
+		}else if(instanciaPrimaria == "172.21.72.32"){
+			//switch
+			var ga = new GlideAjax('MostrarServiceGroupBCR32ScrtpInclude');
+			ga.addParam('sysparm_name', 'ServiceList');
+			ga.getXML(BCRParse32);
+			
+		}
+	}
+	
+	
+	function BCRParse30 (response) {
+		var reponseScriptData = response.responseXML.documentElement.getAttribute("answer");
+		var arrayValue = JSON.parse(reponseScriptData).servicegroup;
+		debugger;
+		for(var i = 0; i < arrayValue.length; i++ ){
+			
+			var dataBoxFill = arrayValue[i].servicegroupname;
+			g_form.addOption('service_group_binding1',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding2',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding3',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding4',dataBoxFill,dataBoxFill);
+		}//fin for
+	}
+	
+	
+	
+	function BCRParse32 (response) {
+		var reponseScriptData = response.responseXML.documentElement.getAttribute("answer");
+		var arrayValue = JSON.parse(reponseScriptData).servicegroup;
+		debugger;
+		for(var i = 0; i < arrayValue.length; i++ ){
+			
+			var dataBoxFill = arrayValue[i].servicegroupname;
+			g_form.addOption('service_group_binding1',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding2',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding3',dataBoxFill,dataBoxFill);
+			g_form.addOption('service_group_binding4',dataBoxFill,dataBoxFill);
+		}//fin for
+	}
+	
+	
+	
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-27 18:08:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc1f47e54f923300c09fb8de9310c7c9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>cargarServiceGroupOnVS</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>catalog_script_client_bc1f47e54f923300c09fb8de9310c7c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-29 17:01:22</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+</record_update>

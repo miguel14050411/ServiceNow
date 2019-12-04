@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>Pruebas y Desarrollo UI</name>
+        <scoped_name>x_287988_bcr_app_zona1</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-08 04:40:00</sys_created_on>
+        <sys_id>faa920434f0b3300c09fb8de9310c70a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Pruebas y Desarrollo UI</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_faa920434f0b3300c09fb8de9310c70a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-11 16:39:16</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<style>
+		#example_paginate {
+		  float: left !important; clear: left; width: 100%; padding-bottom: 1em;
+		
+		}
+	
+	
+	table.redTable {
+  background-color: #EEE7DB;
+  width: 50%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.redTable td, table.redTable th {
+  border: 1px solid #AAAAAA;
+  padding: 1px 0px;
+}
+table.redTable tbody td {
+  font-size: 13px;
+}
+table.redTable tr:nth-child(even) {
+  background: #F5C8BF;
+}
+table.redTable thead {
+  background: #A40808;
+}
+table.redTable thead th {
+  font-size: 10px;
+  
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
+}
+table.redTable thead th:first-child {
+  border-left: none;
+}
+
+table.redTable tfoot {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #A40808;
+}
+table.redTable tfoot td {
+  font-size: 13px;
+}
+table.redTable tfoot .links {
+  text-align: right;
+}
+table.redTable tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #A40808;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+	
+	</style>
+	
+	
+	<!-- Pruebas y desarrollo
+
+
+•	166        DMZ-PREPROD-WEB*
+•	167        DMZ-PREPROD-TXS*
+•	169        DMZ-PREPROD-CLISRV**
+•	170        OUTSIDE**
+•	905        DMZLANWEB-DESA**
+•	910        DMZLANTXS-DESA**
+•	920        DMZLANWEB-PRU*
+•	925        DMZLANTXS-PRU**
+•	962        DMZ-VDI-PROVEEDOR-SAS-SRV***
+•	1104      DMZCLI-SRV-PRU***
+•	1105      DMZCLI-SRVDESA
+
+
+
+-->
+
+	 <div>
+      <table id="example" class="redTable" cellspacing="0" width="50%">
+		    <caption>PRUEBAS Y DESARROLLO</caption>
+            <thead>
+                <tr>
+                  <th>Zona</th>           
+                  <th>Número</th>
+                 
+                </tr>
+              </thead>
+            <tbody>
+             <tr>
+               <td>DMZ-PREPROD-WEB</td>
+               <td>166</td>
+            
+             </tr>
+				
+				
+				   <tr>
+               <td>DMZ-PREPROD-TXS</td>
+               <td>167</td>
+            
+             </tr>
+				
+				
+				   <tr>
+               <td>DMZ-PREPROD-CLISRV</td>
+               <td>169</td>
+            
+             </tr>
+				
+				
+				   <tr>
+               <td>OUTSIDE</td>
+               <td>170</td>
+            
+             </tr>
+				
+				
+				   <tr>
+               <td>DMZLANWEB-DESA</td>
+               <td>905</td>
+            
+             </tr>
+				
+				
+				   <tr>
+               <td>DMZLANTXS-DESA</td>
+               <td>910</td>
+            
+             </tr>
+				
+				   <tr>
+               <td>DMZLANWEB-PRU</td>
+               <td>920</td>
+            
+             </tr>
+				
+				   <tr>
+               <td>DMZLANTXS-PRU</td>
+               <td>925</td>
+            
+             </tr>
+				
+				   <tr>
+               <td>DMZ-VDI-PROVEEDOR-SAS-SRV</td>
+               <td>962</td>
+            
+             </tr>
+				
+				   <tr>
+               <td>DMZCLI-SRV-PRU</td>
+               <td>1104</td>
+            
+             </tr>
+				
+				   <tr>
+               <td>DMZCLI-SRVDESA</td>
+               <td>1105</td>
+            
+             </tr>
+				
+				
+            </tbody>
+        </table>
+
+      </div>
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+     var table = $('#example').DataTable( {
+               "pageLength": 5,
+		 "Next": "Siguiente pagina",
+		 "bFilter": false, //hide Search bar
+    "bInfo": false,// hide showing entries
+	// Text labels
+		"bLengthChange": false,
+		
+	
+
+
+		
+
+		
+              
+          });
+        $('#example').removeClass( 'display' ).addClass('table table-striped table-bordered');
+    });
+		
+		
+		
+	
+    </script>
+	
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

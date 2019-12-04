@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="Perfiles de Persistencia BCR">556b668f4f823300c09fb8de9310c701</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-19 21:09:21</sys_created_on>
+        <sys_id>d7bc6acf4f823300c09fb8de9310c7e7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PersistenciasVariableSetBCR.Perfiles de Persistencia</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>io_set_item_d7bc6acf4f823300c09fb8de9310c7e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-19 21:09:21</sys_updated_on>
+        <variable_set display_value="PersistenciasVariableSetBCR">8aac2acf4f823300c09fb8de9310c7b2</variable_set>
+    </io_set_item>
+</record_update>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.obtenergranjaNombreservidoresBCR</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>obtenergranjaNombreservidoresBCR</name>
+        <script><![CDATA[var obtenergranjaNombreservidoresBCR = Class.create();
+obtenergranjaNombreservidoresBCR.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	listarGranjasNombre: function(){
+		
+		var array = [];
+		var ServiceGroupname = "";
+		servidoresenServiceGroup= [];
+		var finIP = "";
+		var virtualName = "";
+		var PuertoServer = "";
+		var parametroSelectBox = "VS_virtualGranjaBCR_80";
+		
+		
+		var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'ConsultaGranjaBCR');
+		
+		r.setStringParameter("serverName","vs_granjaDATASYS_80");
+		
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		var arrayValue= JSON.parse(responseBody).lbvserver_binding;
+		//var arrayServers = JSON.parse(responseBody).lbvserver_servicegroupmember_binding;
+		
+		
+		for(var i = 0; i < arrayValue.length; i++ ){
+			
+			ServiceGroupname  = arrayValue[i].lbvserver_servicegroup_binding[i].servicegroupname;
+			virtualName = arrayValue[i].lbvserver_servicegroup_binding[i].name;
+			
+			var arrayValues2 = arrayValue[i].lbvserver_servicegroupmember_binding;
+			
+			for(var j = 0; j < arrayValues2.length; j++ ){
+				
+				finIP = arrayValues2[j].ipv46;
+				PuertoServer = arrayValues2[j].port;
+				array.push(finIP,PuertoServer);
+				
+			}
+			
+//--------------------------------------------------------------------------------------------------
+			//var array.toString();
+			
+			//var arrayIPs = ['2.4.9.1','80','3.3.2.1','80','4.4.3.1','80'];
+			var arrayIPs = array;
+			var IPServer = "";
+			//gs.info(arrayIPs);
+			var nombreArray = [];
+			
+			for(var jj = 0; jj < arrayIPs.length; jj++){
+				
+				var rj = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'ObtenerServidoresBCR');
+				
+				var responsej = rj.execute();
+				
+				var responseBodyj = responsej.getBody();
+				
+				var httpStatusj = responsej.getStatusCode();
+				
+				var arrayValuej= JSON.parse(responseBodyj).server;
+				
+				for(var ij = 0; ij < arrayValuej.length; i++){
+					
+					IPServer = arrayValuej[ij].ipaddress;
+					
+					if(IPServer == arrayIPs[jj]){
+						
+						var nombreServer= arrayValue[ij].name;
+						var ipServer= arrayValue[ij].ipaddress;
+						nombreArray.push(nombreServer + ipServer);
+						
+					}
+				}
+				//gs.info(nombreArray.toString());
+				return nombreArray.toString();
+				
+			}
+			
+			
+			
+			//--------------------------------------------------------------------------------------------------------------------
+			
+			
+		}
+		
+		
+		
+		
+	},
+	
+	type: 'obtenergranjaNombreservidoresBCR'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-12 21:00:23</sys_created_on>
+        <sys_id>1fefe4a84fd37300c09fb8de9310c76f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>obtenergranjaNombreservidoresBCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_1fefe4a84fd37300c09fb8de9310c76f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-12 21:19:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

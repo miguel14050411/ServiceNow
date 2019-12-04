@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.AngularExample</api_name>
+        <client_callable>true</client_callable>
+        <description>Este es un ejemplo de controlador.</description>
+        <name>AngularExample</name>
+        <script><![CDATA[var AngularExample = Class.create();
+AngularExample.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	angularController: function (){
+		
+	app.controller('MainController', ['$scope', function($scope) {
+
+           $scope.greeting = "Hello from Angular!";
+
+   }]);
+		
+		
+	},
+
+    type: 'AngularExample'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-24 23:08:15</sys_created_on>
+        <sys_id>7b6eea89db45330087d9d6aa48961903</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AngularExample</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_7b6eea89db45330087d9d6aa48961903</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-24 23:08:15</sys_updated_on>
+    </sys_script_include>
+</record_update>

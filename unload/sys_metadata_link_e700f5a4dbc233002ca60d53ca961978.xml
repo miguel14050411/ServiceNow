@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>09da21601bca3b002ad798aebd4bcb14</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_remote_update_set">
+    <sys_remote_update_set action="INSERT_OR_UPDATE">
+        <application display_value="Global">global</application>
+        <application_name>Global</application_name>
+        <application_scope>global</application_scope>
+        <application_version/>
+        <collisions>0</collisions>
+        <commit_date/>
+        <deleted>0</deleted>
+        <description/>
+        <inserted>17</inserted>
+        <name>Telecom_Catalogo_Granjas_Servidores_CFCH_v1 </name>
+        <origin_sys_id/>
+        <parent/>
+        <release_date/>
+        <remote_base_update_set/>
+        <remote_parent_id/>
+        <remote_sys_id>42a75de01b8a3b002ad798aebd4bcba8</remote_sys_id>
+        <state>previewed</state>
+        <summary>17</summary>
+        <sys_class_name>sys_remote_update_set</sys_class_name>
+        <sys_created_by>114190586</sys_created_by>
+        <sys_created_on>2019-06-11 21:56:35</sys_created_on>
+        <sys_id>09da21601bca3b002ad798aebd4bcb14</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-11 22:16:35</sys_updated_on>
+        <update_set/>
+        <update_source/>
+        <updated>0</updated>
+    </sys_remote_update_set>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-11 22:19:25</sys_created_on>
+        <sys_id>e700f5a4dbc233002ca60d53ca961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Telecom_Catalogo_Granjas_Servidores_CFCH_v1 </sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_metadata_link_e700f5a4dbc233002ca60d53ca961978</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-11 22:19:25</sys_updated_on>
+        <tablename>sys_remote_update_set</tablename>
+    </sys_metadata_link>
+</record_update>

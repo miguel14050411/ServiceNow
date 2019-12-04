@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.MostrarModificarServiceGroupBCR30</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>MostrarModificarServiceGroupBCR30</name>
+        <script><![CDATA[var MostrarModificarServiceGroupBCR30 = Class.create();
+MostrarModificarServiceGroupBCR30.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	listarSG:function(){
+		var searchQuery = this.getParameter('sysparm_JSON_data');
+	//var serviceGgroupModif = current.variables.servicegroup_a_modificar;
+	var arrayValue = [];
+var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'mostrarServiceGroupFiltroModificar.30');
+		
+		r.setStringParameterNoEscape('servername', searchQuery);
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		//---------------------------------------------------------------------------------------
+		var valueGet = JSON.parse(responseBody);
+		var serviceGroupName = valueGet.servicegroup[0].servicegroupname;
+		var tipoProtocolo = valueGet.servicegroup[0].servicetype;
+		var cacheType = valueGet.servicegroup[0].cachetype;
+		//options
+		var cacheable = valueGet.servicegroup[0].cacheable;
+		var healthmonitor = valueGet.servicegroup[0].healthmonitor;
+		var state = valueGet.servicegroup[0].state;
+		var appflowlog = valueGet.servicegroup[0].appflowlog;
+		
+		arrayValue.push(serviceGroupName,tipoProtocolo,tipoProtocolo,cacheType,cacheable,healthmonitor,state,appflowlog);
+	
+		return arrayValue.toString();
+	},
+	type: 'MostrarModificarServiceGroupBCR30'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-09 20:25:14</sys_created_on>
+        <sys_id>cbd1e9a54f227300c09fb8de9310c749</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>MostrarModificarServiceGroupBCR30</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_cbd1e9a54f227300c09fb8de9310c749</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-10 16:39:15</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Services BCR">6e9f55484f873300c09fb8de9310c79f</catalog_item>
+        <catalog_variable>IO:6603250c4f873300c09fb8de9310c7a9</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-30 02:15:23</sys_created_on>
+        <sys_id>5d5275484fc73300c09fb8de9310c7ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>service_a_eliminar</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_5d5275484fc73300c09fb8de9310c7ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-30 02:15:23</sys_updated_on>
+        <table/>
+        <ui_policy display_value="eliminarServicesBCR">fc32bd084fc73300c09fb8de9310c766</ui_policy>
+        <variable>service_a_eliminar</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+</record_update>

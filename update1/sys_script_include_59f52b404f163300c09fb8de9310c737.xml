@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_287988_bcr_app.llamadoMasDatasys</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>llamadoMasDatasys</name>
+        <script><![CDATA[var llamadoMasDatasys = Class.create();
+llamadoMasDatasys.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	llamadoFunction: function(){
+		
+		var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'DATASYSMASGET');
+		
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		var arrayValue= JSON.parse(responseBody).ns;
+		var ipValue= '';
+		var haValue = '';
+		var array = [];
+		
+		for(var i = 0; i < arrayValue.length; i++ ){
+			
+			//x_287988_bcr_app: the primary node is: Primary and the IP Address is: 172.31.238.15
+			
+			if(arrayValue[i].ip_address == '172.31.238.15' && arrayValue[i].ha_master_state == 'Primary'){
+				
+				ipValue = arrayValue[i].ip_address;
+				haValue = arrayValue[i].ha_master_state;
+			    array.push(ipValue,haValue);
+				
+
+				//poner aca el script includes de esa IP
+				
+			}else if(arrayValue[i].ip_address == "172.31.238.13" && arrayValue[i].ha_master_state == 'Primary'){
+				ipValue = arrayValue[i].ip_address;
+				haValue = arrayValue[i].ha_master_state;
+			    array.push(ipValue,haValue);
+				
+				//poner el include script de la otra IP
+			}
+			
+		}//fin for
+
+		return array.toString();
+		
+	},
+	
+	type: 'llamadoMasDatasys'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-23 04:17:13</sys_created_on>
+        <sys_id>59f52b404f163300c09fb8de9310c737</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>llamadoMasDatasys</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_59f52b404f163300c09fb8de9310c737</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-24 15:16:37</sys_updated_on>
+    </sys_script_include>
+</record_update>

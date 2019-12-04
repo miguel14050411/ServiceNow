@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>MostrarVirtualServers</name>
+        <scoped_name>x_287988_bcr_app_MostrarVirtualServers</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-11 18:22:48</sys_created_on>
+        <sys_id>29a58bfedb80330087d9d6aa48961946</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>MostrarVirtualServers</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_29a58bfedb80330087d9d6aa48961946</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 04:15:07</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	
+		<p id="demo"></p>
+	
+	
+	
+	<button id="btn_Add" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="mostrarServers();"> Mostrar Virtual Servers </button>
+	
+
+	
+	
+	
+	<script>
+		
+
+	
+	function mostrarServers(){
+		
+		var ga = new GlideAjax('MostrarVirtualServers');
+		ga.addParam('sysparm_name', 'ShowVirtualServer');
+		
+		ga.getXML(HelloWorldParse); 
+		
+		function HelloWorldParse(response) {
+		debugger;
+		var reponseScript =  response.responseXML.documentElement.getAttribute("answer");
+	
+		alert(reponseScript);
+		
+		// start by defining the html table with desired style...
+
+		var strTable = '<table  id="table" style="align:center; border-collapse: collapse;" class="table table-striped thead-dark">';
+		
+		
+		// add header rows
+
+		strTable += '<tr><th>Name</th><th>State</th><th>Effective State</th><th>IP address</th><th>Port</th><th>Protocol</th><th>Persistence</th><th>% health</th></tr>';
+
+		
+		// parse JSON and put results into table
+
+		var parsedResults = JSON.parse(obj).lbvserver;
+		alert(parsedResults);
+		
+		
+		
+		for (var i = 0; i &lt; parsedResults.length; i++) {
+
+         strTable += '<tr>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].name + '</td>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].curstate + '</td>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].effectivestate + '</td>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].ipv46 + '</td>';
+		
+		 strTable += '<td  contenteditable="true">' + parsedResults[i].port + '</td>';
+		
+		 strTable += '<td  contenteditable="true">' + parsedResults[i].servicetype + '</td>';
+		
+		strTable += '<td  contenteditable="true">' + parsedResults[i].lbmethod + '</td>';
+		
+		strTable += '<td  contenteditable="true">' + parsedResults[i].health + '</td>';
+
+         strTable += '</tr>';
+
+}         
+		
+		
+strTable += '</table>';
+		
+		
+	
+// then set value to the dynamic table string
+
+g_form.setValue('variable', strTable);
+		$j('#demo').append(strTable);	
+		
+		
+
+		}
+		
+	}
+	
+		
+
+	</script>
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

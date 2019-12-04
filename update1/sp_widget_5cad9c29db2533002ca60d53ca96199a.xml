@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function sections() {
+    return {
+        'Welcome to ServiceNow!' : { 'name' : 'welcome_to_servicenow'},
+                'EXAMPLE LINE 2' : { 'name' : 'other_ui_page_name_here'}
+    };
+}
+
+function render() {
+    var name = renderer.getPreferences().get("name");
+    var gf = new GlideForm(renderer.getGC(), name, 0);
+    gf.setDirect(true);
+    gf.setRenderProperties(renderer.getRenderProperties());
+    return gf.getRenderedPage();
+}
+
+function getEditLink() {
+    if (!gs.hasRole('admin'))
+        return '';
+   
+    return "sys_ui_page.do?sysparm_query=name=" + renderer.getPreferences().get("name");
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>custom_widgets_kevsan</id>
+        <internal>false</internal>
+        <link/>
+        <name>custom widgets_kevsan</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-20 22:21:50</sys_created_on>
+        <sys_id>5cad9c29db2533002ca60d53ca96199a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>custom widgets_kevsan</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sp_widget_5cad9c29db2533002ca60d53ca96199a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-20 22:23:30</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+ <!-- Contains the HTML and CSS necessary for all styling and layout. Feel free to modify if need be. -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<style type="text/css">
+    .homepage-quicklinks {
+        background-color: #ffffff;
+        font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+    }
+    .text-info {
+        color: #31708f;
+    }
+    a.text-info:hover, a.text-info:focus {
+        color: #245269;
+    }
+    .text-success {
+        color: #5cb85c;
+    }
+    a.text-success:hover, a.text-success:focus {
+        color: #449d44;
+    }
+    .text-warning {
+        color: #f0ad4e;
+    }
+    a.text-warning:hover, a.text-warning:focus {
+        color: #ec971f;
+    }
+    .text-danger {
+        color: #d9534f;
+    }
+    a.text-danger:hover, a.text-danger:focus {
+        color: #c9302c;
+    }
+    .text-muted {
+        color: #979797;
+    }
+    a.circle_icon {
+        display: block;
+        padding: 20px 0px 20px 70px;
+        position: relative;
+    }
+    a.circle_icon .fa {
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+    a.circle_icon h3 {
+        font-weight: 300 !important;
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+    }
+</style>
+
+<h1 style="color:#717171;font-size:3em;text-align:center">Welcome to ServiceNow!</h1>
+
+<div class="homepage-quicklinks" style="background-size: initial; background-position: center center;">
+    <div>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <span>
+                    <div>
+                        <div>
+                            <a class="circle_icon  text-info" target="" href="catalog_home.do?sysparm_view=catalog_default">
+                                <span class="fa fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-shopping-basket fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3>Order Something</h3>
+                                <span class="text-muted">Browse the catalog for services and items you need</span>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <span>
+                    <div>
+                        <div>
+                            <a class="circle_icon  text-success" target="" href="kb_home.do">
+                                <span class="fa fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3>Knowledge Base</h3>
+                                <span class="text-muted">Browse and search for articles, rate or submit feedback</span>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <span>
+                    <div>
+                        <div>
+                            <a class="circle_icon  text-warning" target="" href="com.glideapp.servicecatalog_cat_item_view.do?sysparm_id=3f1dd0320a0a0b99000a53f7604a2ef9">
+                                <span class="fa fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-fire fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3>Report an Issue</h3>
+                                <span class="text-muted">Contact support to make a request, or report a problem</span>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <span>
+                    <div>
+                        <div>
+                            <a class="circle_icon  text-danger" target="" href="#" onclick="popupOpenStandard('$chat_support.do?queueID=63470d1e6fbe460055b51665bd3ee421')">
+                                <span class="fa fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3>Live Chat</h3>
+                                <span class="text-muted">Start a chat conversation with customer service agents</span>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

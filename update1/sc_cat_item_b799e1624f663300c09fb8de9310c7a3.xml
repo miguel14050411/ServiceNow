@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="categoria de Solicitud de Telecomunicaciones ">a913ed08db3133002ca60d53ca9619ff</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<style><!--
+.intro-2 {
+    background: url("https://img.yogonet.com//uploads/imagenes/repositorio/2019/02/12/23808/20190212120540a79a1cb73e2d14c00164189538d41cea.jpg")no-repeat center center;
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+    height: 300px;<span id="CmCaReT"></span><span id="CmCaReT"></span>;<span id="CmCaReT"></span>
+ <span id="CmCaReT"></span>;
+}<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+--></style>
+<div class="view intro-2">
+<div class="full-bg-img">
+<div class="mask rgba-black-light flex-center">
+<div class="container text-center white-text">
+<div class="white-text text-center wow fadeInUp">
+<h1 class="font-weight-light" style="color: white;">Developed by Datasys Group</h1>
+<h5 style="color: white;">Follow your passion, be prepared to work hard and sacrifice, and, above all, don&#39;t let anyone limit your dreams.</h5>
+<br />
+<div style="color: white;">Innovation to leader</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p> </p>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p align="justify">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="container">
+<h2 class="font-weight-light"> Servers</h2>
+<ul style="list-style-position: inside;"><li>Crear Server</li><li>ELiminar Server</li><li>Modificar Server</li></ul>
+</div>
+<div class="ephox-sloth-bin ephox-sloth-bin_46734804311553289680187" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
+<div class="page_title no_padding_page_title">Service Groups</div>
+</div>]]></description>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon>c5edfb324f223300c09fb8de9310c7b3</icon>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Server BCR</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>2</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=b799e1624f663300c09fb8de9310c7a3&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <roles/>
+        <sc_catalogs>6d1e1904db3133002ca60d53ca9619fe</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>Creación de Servers</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-12 23:30:58</sys_created_on>
+        <sys_id>b799e1624f663300c09fb8de9310c7a3</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Server BCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sc_cat_item_b799e1624f663300c09fb8de9310c7a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-07 16:24:00</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="copy of BCR-2019-Implementacion">f9938450db8233002ca60d53ca96191b</workflow>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=b799e1624f663300c09fb8de9310c7a3"/>
+    <fx_price action="delete_multiple" query="id=b799e1624f663300c09fb8de9310c7a3"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>price</field>
+        <id>b799e1624f663300c09fb8de9310c7a3</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-12 23:30:58</sys_created_on>
+        <sys_id>8ab969224f663300c09fb8de9310c705</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-12 23:30:58</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>b799e1624f663300c09fb8de9310c7a3</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-12 23:30:58</sys_created_on>
+        <sys_id>4ab969224f663300c09fb8de9310c706</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-12 23:30:58</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/x-icon</content_type>
+        <file_name>icon</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>67646</size_bytes>
+        <size_compressed>2764</size_compressed>
+        <state/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-14 04:56:50</sys_created_on>
+        <sys_id>c5edfb324f223300c09fb8de9310c7b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-14 04:56:50</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>b799e1624f663300c09fb8de9310c7a3</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="c5edfb324f223300c09fb8de9310c7b3">c5edfb324f223300c09fb8de9310c7b3</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-14 04:56:50</sys_created_on>
+        <sys_id>cdedfb324f223300c09fb8de9310c7b3</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>3672</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="c5edfb324f223300c09fb8de9310c7b3">c5edfb324f223300c09fb8de9310c7b3</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-14 04:56:50</sys_created_on>
+        <sys_id>41edfb324f223300c09fb8de9310c7b4</sys_id>
+    </sys_attachment_doc>
+</record_update>

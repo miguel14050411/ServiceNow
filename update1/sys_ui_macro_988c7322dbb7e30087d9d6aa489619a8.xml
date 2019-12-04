@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>CrearPolos</name>
+        <scoped_name>x_287988_bcr_app_CrearPolos</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-26 17:21:09</sys_created_on>
+        <sys_id>988c7322dbb7e30087d9d6aa489619a8</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>CrearPolos</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_988c7322dbb7e30087d9d6aa489619a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-07 01:46:23</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	
+	<button id="btn_Add" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="addFunc();">Agregar </button>
+	
+	
+	
+
+<html>
+
+<head>
+	
+	</head>
+
+<body>
+	
+
+<br/><br/>
+	<br/><br/>
+
+	
+	<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">DATASYS GROUP</h5>
+    <p class="card-text">Especialistas en soporte ServiceNow</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> DATASYS GROUP</a>
+    </div>
+    <!-- Copyright -->
+	
+	
+	
+	
+	
+
+</body>
+
+</html>
+	
+	
+	
+	
+	
+	<script>
+	
+	
+	function addFunc(){
+		
+		//variables
+		debugger;
+		//cambiar y obteerlo desde puro servicenow parameters porque lueg el ID puede cambiar
+		var servername = document.getElementById("IO:259db362dbb7e30087d9d6aa48961907").value;
+		var persistencetype = document.getElementById("IO:4b2ebb62dbb7e30087d9d6aa4896190d").value;
+		var persistencebackup = document.getElementById("IO:f8dd7762dbb7e30087d9d6aa48961916").value;
+		
+	var jsonStructure = JSON.stringify({"lbgroup":{"name":servername,"persistencetype":persistencetype,"persistencebackup":persistencebackup}});
+		
+		alert("Hello from CrearPolos");
+		
+		var ga = new GlideAjax('crearPolos_include');
+		ga.addParam('sysparm_name', 'crearPolos');
+		ga.addParam('sysparm_JSON_data',jsonStructure);
+		
+		
+		ga.getXML(HelloWorldParse); 
+		
+		
+		function HelloWorldParse(response) {
+		
+		var answer =  response.responseXML.documentElement.getAttribute("answer");
+		alert(answer);
+		
+			}
+
+		}
+	
+	</script>
+	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

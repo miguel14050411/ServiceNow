@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>BCR_resourceREST</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+try { 
+ var r = new sn_ws.RESTMessageV2('BCR_APP.x_287988_bcr_app.BCRmessage', 'Default GET');
+
+//override authentication profile 
+//authentication type ='basic'/ 'oauth2'
+r.setAuthentication('basic', 'user');
+
+//set a MID server name if one wants to run the message on MID
+r.setMIDServer('MID_SERVICE_ARROW');
+
+//if the message is configured to communicate through ECC queue, either
+//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+//to true. Otherwise, one may get an intermittent error that the response body is null
+//r.setEccParameter('skip_sensor', true);
+
+  response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+		   
+}
+catch(ex) {
+ var message = ex.message;
+}	  
+	
+ 
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_287988_bcr_app/bcr_script</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>REST BCR connection</short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-22 22:25:11</sys_created_on>
+        <sys_id>40fb58addb77230087d9d6aa489619d1</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>BCR_resourceREST</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ws_operation_40fb58addb77230087d9d6aa489619d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-26 02:39:36</sys_updated_on>
+        <web_service_definition display_value="BCR_Script">bedb58addb77230087d9d6aa489619ca</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>MostrarServerBCR</name>
+        <scoped_name>x_287988_bcr_app_MostrarServerBCR</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-17 16:27:04</sys_created_on>
+        <sys_id>ff6835c04f323300c09fb8de9310c756</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>MostrarServerBCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_ff6835c04f323300c09fb8de9310c756</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-17 16:49:53</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<h3>
+   Server
+  <small class="text-muted">Información a buscar de cada Server</small>
+</h3>
+	
+<input  id="myInput" onkeyup="myFunction()" class="form-control" type="text" placeholder="Buscar Server" title="verificar información"/>
+	
+	<p id="demo"></p>
+	
+	<script>
+		
+		var ga = new GlideAjax('MostrarServerBCR30');
+		ga.addParam('sysparm_name', 'listarServer30');
+		
+		ga.getXML(HelloWorldParse); 
+		
+		function HelloWorldParse(response) {
+		debugger;
+		var reponseScript =  response.responseXML.documentElement.getAttribute("answer");
+	
+		//console.log(reponseScript);
+		
+		// start by defining the html table with desired style...
+		
+		
+
+		var strTable = '<table id="table" style="align:center; border-collapse: collapse;" class="table table-striped">';
+
+		
+		
+		// add header rows
+		strTable += '<tr><th>Name</th><th>State</th><th>IP Address/Domain</th><th>Traffic Domain</th><th>domain</th><th>translationmask</th><th>Comments</th></tr>';
+
+		
+		// parse JSON and put results into table
+
+		var parsedResults = JSON.parse(reponseScript).server;
+		console.log(parsedResults);
+		
+		
+		for (var i = 0; i &lt; parsedResults.length; i++) {
+
+         strTable += '<tr>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].name + '</td>';
+
+         strTable += '<td   contenteditable="true">' + parsedResults[i].state + '</td>';
+
+         strTable += '<td style="padding:0 50px 0 20px;"  contenteditable="true">' + parsedResults[i].ipaddress + '</td>';
+
+         strTable += '<td  contenteditable="true">' + parsedResults[i].domain + '</td>';
+		
+		 strTable += '<td  contenteditable="true">' + parsedResults[i].translationmask + '</td>';
+		
+		 strTable += '<td  contenteditable="true">' + parsedResults[i].ipv6address + '</td>';
+		
+		strTable += '<td  contenteditable="true">' + parsedResults[i].comment + '</td>';
+		
+		//strTable += '<td contenteditable="true">' + parsedResults[i].td + '</td>';
+
+         strTable += '</tr>';
+
+}         
+		
+		
+strTable += '</table>';
+		
+		
+	
+// then set value to the dynamic table string
+
+g_form.setValue('variable', strTable);
+		$j('#demo').append(strTable);	
+		
+		
+}
+		
+		
+
+		function myFunction() {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#table tbody").rows;
+    
+    for (var i = 0; i &lt; rows.length; i++) {
+        var nombre = rows[i].cells[0].textContent.toUpperCase();
+        var ip = rows[i].cells[3].textContent.toUpperCase();
+		 var puerto = rows[i].cells[4].textContent.toUpperCase();
+        if (nombre.indexOf(filter) > -1 || ip.indexOf(filter) > -1 || puerto.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*	
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i &lt; tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+		console.log(td);
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+		
+      }
+    }       
+  }
+}
+*/
+
+		
+
+	</script>
+	
+	
+	
+	
+	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

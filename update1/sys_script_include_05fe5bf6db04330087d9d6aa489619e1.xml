@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.EliminarVirtualServer</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>EliminarVirtualServer</name>
+        <script><![CDATA[var EliminarVirtualServer = Class.create();
+EliminarVirtualServer.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	
+	EliminarServer: function(){
+		
+var paramValue = this.getParameter('sysparm_JSON_data');
+		
+
+
+ var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'Eliminar virtual Server');
+
+ //r.setQueryParameter('serverName','Adrian');
+ r.setStringParameterNoEscape('serverName', paramValue);
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+gs.info(httpStatus + ' '+responseBody );
+
+		return responseBody;
+	},
+
+    type: 'EliminarVirtualServer'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-11 20:08:50</sys_created_on>
+        <sys_id>05fe5bf6db04330087d9d6aa489619e1</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>EliminarVirtualServer</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_05fe5bf6db04330087d9d6aa489619e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-12 16:21:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

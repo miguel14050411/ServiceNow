@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="categoria de Solicitud de Telecomunicaciones ">a913ed08db3133002ca60d53ca9619ff</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<ul style="list-style-position: inside;"><li><strong> Crear Granjas</strong></li></ul>
+<style><!--
+.intro-2 {
+    background: url("https://img.yogonet.com//uploads/imagenes/repositorio/2019/02/12/23808/20190212120540a79a1cb73e2d14c00164189538d41cea.jpg")no-repeat center center;
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+    height: 300px;<span id="CmCaReT"></span><span id="CmCaReT"></span>;<span id="CmCaReT"></span>
+ <span id="CmCaReT"></span>;
+}<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+--></style>
+<div class="view intro-2">
+<div class="full-bg-img">
+<div class="mask rgba-black-light flex-center">
+<div class="container text-center white-text">
+<div class="white-text text-center wow fadeInUp">
+<h1 class="font-weight-light" style="color: white;"><strong>Developed by Datasys Group</strong></h1>
+<h5 style="color: white;"><strong>Follow your passion, be prepared to work hard and sacrifice, and, above all, don&#39;t let anyone limit your dreams.</strong></h5>
+<br />
+<div style="color: white;"><strong>Innovation to leader</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p> </p>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p align="justify">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="container">
+<h2 class="font-weight-light"> Granja de Servidores</h2>
+</div>
+<div class="ephox-sloth-bin ephox-sloth-bin_46734804311553289680187" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
+<div class="page_title no_padding_page_title">Service Groups</div>
+</div>]]></description>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon>296e8bfb4f523300c09fb8de9310c703</icon>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Solicitudes BCR</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>1</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=0543ad08db3133002ca60d53ca96190a&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <roles/>
+        <sc_catalogs>6d1e1904db3133002ca60d53ca9619fe</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>creacion de granjas para el BCR</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-28 21:51:34</sys_created_on>
+        <sys_id>0543ad08db3133002ca60d53ca96190a</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Solicitudes BCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sc_cat_item_0543ad08db3133002ca60d53ca96190a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-11 15:49:31</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="copy of BCR-2019-Implementacion">f9938450db8233002ca60d53ca96191b</workflow>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=0543ad08db3133002ca60d53ca96190a"/>
+    <fx_price action="delete_multiple" query="id=0543ad08db3133002ca60d53ca96190a"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>price</field>
+        <id>0543ad08db3133002ca60d53ca96190a</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-28 21:51:34</sys_created_on>
+        <sys_id>9b63ed08db3133002ca60d53ca96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-28 21:51:34</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>0543ad08db3133002ca60d53ca96190a</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-28 21:51:34</sys_created_on>
+        <sys_id>d363ed08db3133002ca60d53ca961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-28 21:51:34</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/x-icon</content_type>
+        <file_name>icon</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>67646</size_bytes>
+        <size_compressed>3697</size_compressed>
+        <state/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:47:34</sys_created_on>
+        <sys_id>296e8bfb4f523300c09fb8de9310c703</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-04 17:47:34</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>0543ad08db3133002ca60d53ca96190a</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="296e8bfb4f523300c09fb8de9310c703">296e8bfb4f523300c09fb8de9310c703</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:47:34</sys_created_on>
+        <sys_id>216e8bfb4f523300c09fb8de9310c704</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>4916</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="296e8bfb4f523300c09fb8de9310c703">296e8bfb4f523300c09fb8de9310c703</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:47:34</sys_created_on>
+        <sys_id>a16e8bfb4f523300c09fb8de9310c704</sys_id>
+    </sys_attachment_doc>
+</record_update>

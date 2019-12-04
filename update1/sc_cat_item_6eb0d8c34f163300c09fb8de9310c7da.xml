@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="categoria de Solicitud de Telecomunicaciones ">a913ed08db3133002ca60d53ca9619ff</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p> </p>
+<style><!--
+.intro-2 {
+    background: url("https://img.yogonet.com//uploads/imagenes/repositorio/2019/02/12/23808/20190212120540a79a1cb73e2d14c00164189538d41cea.jpg")no-repeat center center;
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+    height: 300px;<span id="CmCaReT"></span><span id="CmCaReT"></span>;<span id="CmCaReT"></span>
+ <span id="CmCaReT"></span>;
+}<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+<span id="CmCaReT"></span>
+--></style>
+<div class="view intro-2">
+<div class="full-bg-img">
+<div class="mask rgba-black-light flex-center">
+<div class="container text-center white-text">
+<div class="white-text text-center wow fadeInUp">
+<h1 class="font-weight-light" style="color: white;">Developed by Datasys Group</h1>
+<h5 style="color: white;">Follow your passion, be prepared to work hard and sacrifice, and, above all, don&#39;t let anyone limit your dreams.</h5>
+<br />
+<div style="color: white;">Innovation to leader</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p> </p>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p align="justify">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="container">
+<h2 class="font-weight-light"> Monitores de Salud</h2>
+<ul style="list-style-position: inside;"><li>Crear Perfil de Persistencia</li><li>ELiminar Perfil de Persistencia</li><li>Modificar Perfil de Persistencia</li><li>Verificar Perfil de Persistencia</li></ul>
+</div>
+<div class="ephox-sloth-bin ephox-sloth-bin_46734804311553289680187" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
+<div class="page_title no_padding_page_title">Service Groups</div>
+</div>]]></description>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon>2cce433f4f523300c09fb8de9310c721</icon>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Monitores de Salud BCR</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>6</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=6eb0d8c34f163300c09fb8de9310c7da&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <roles/>
+        <sc_catalogs>6d1e1904db3133002ca60d53ca9619fe</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>Monitores de Salud</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:03:54</sys_created_on>
+        <sys_id>6eb0d8c34f163300c09fb8de9310c7da</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Monitores de Salud BCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sc_cat_item_6eb0d8c34f163300c09fb8de9310c7da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-07 16:24:15</sys_updated_on>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="copy of BCR-2019-Implementacion">f9938450db8233002ca60d53ca96191b</workflow>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=6eb0d8c34f163300c09fb8de9310c7da"/>
+    <fx_price action="delete_multiple" query="id=6eb0d8c34f163300c09fb8de9310c7da"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>price</field>
+        <id>6eb0d8c34f163300c09fb8de9310c7da</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:03:54</sys_created_on>
+        <sys_id>99d094474f163300c09fb8de9310c790</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 20:03:54</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>6eb0d8c34f163300c09fb8de9310c7da</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:03:54</sys_created_on>
+        <sys_id>69d094474f163300c09fb8de9310c791</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 20:03:54</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/x-icon</content_type>
+        <file_name>icon</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>67646</size_bytes>
+        <size_compressed>3534</size_compressed>
+        <state/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:49:08</sys_created_on>
+        <sys_id>2cce433f4f523300c09fb8de9310c721</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-04 17:49:08</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>6eb0d8c34f163300c09fb8de9310c7da</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="icon" sys_id="2cce433f4f523300c09fb8de9310c721">2cce433f4f523300c09fb8de9310c721</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:49:08</sys_created_on>
+        <sys_id>6cce433f4f523300c09fb8de9310c721</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>4700</length>
+        <position>1</position>
+        <sys_attachment display_value="icon" sys_id="2cce433f4f523300c09fb8de9310c721">2cce433f4f523300c09fb8de9310c721</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:49:08</sys_created_on>
+        <sys_id>ecce433f4f523300c09fb8de9310c721</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>100</order>
+        <question display_value="Tipo de protocolo">85f7dc0f4f163300c09fb8de9310c764</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:45:32</sys_created_on>
+        <sys_id>234ad88f4f163300c09fb8de9310c7aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CITRIX-STA-SERVICE-NHOP</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>question_choice_234ad88f4f163300c09fb8de9310c7aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 20:45:32</sys_updated_on>
+        <text>CITRIX-STA-SERVICE-NHOP</text>
+        <value>CITRIX-STA-SERVICE-NHOP</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=234ad88f4f163300c09fb8de9310c7aa"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>234ad88f4f163300c09fb8de9310c7aa</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:45:32</sys_created_on>
+        <sys_id>db5ad0cf4f163300c09fb8de9310c75c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 20:45:32</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>234ad88f4f163300c09fb8de9310c7aa</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-01 20:45:32</sys_created_on>
+        <sys_id>1f5a988f4f163300c09fb8de9310c752</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 20:45:32</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="BCR MAS">37b6d87f4f023300c09fb8de9310c7b6</basic_auth_profile>
+        <basic_auth_user>admin</basic_auth_user>
+        <content>{"servicegroup_servicegroupmember_binding":{"servicegroupname":"SG_pruebaVirtual18_80","port":"80","state":"ENABLED","hashid":"1","servername":"serviceGroup1"}}</content>
+        <function_name>ServiceGroupMemberBinding BCR .30</function_name>
+        <http_method>put</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>BCRmessage [ ServiceGroupMemberBinding BCR .30 ]</qualified_name>
+        <rest_endpoint>http://${ipAddress}/nitro/v1/config/servicegroup_servicegroupmember_binding</rest_endpoint>
+        <rest_message display_value="BCRmessage">f18a8f81db37230087d9d6aa48961916</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-24 16:47:20</sys_created_on>
+        <sys_id>b550e3a84f523300c09fb8de9310c753</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>ServiceGroupMemberBinding BCR .30</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_rest_message_fn_b550e3a84f523300c09fb8de9310c753</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-08 16:32:46</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server display_value="kevsanDevBCR">bb3a93324f523300c09fb8de9310c739</use_mid_server>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

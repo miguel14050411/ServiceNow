@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css>.result-container {
+ margin-top: 10px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>quick_order</id>
+        <internal>false</internal>
+        <link/>
+        <name>Quick Order</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	if (input.keywords != null && input.keywords != '')
+		data.items = getCatalogItems(input.keywords);
+	else data.items = getPopularItems();
+
+	function getCatalogItems(keywords) {
+		var sc = new GlideRecord('sc_cat_item');
+		sc.addActiveQuery();
+		sc.addQuery('123TEXTQUERY321', keywords);
+		sc.addQuery('sys_class_name', 'NOT IN', 'sc_cat_item_wizard,sc_cat_item_content');
+		sc.addQuery('sc_catalogs', '0d08b13c3330100c8b837659bba8fb4');
+		sc.setLimit(100);
+		sc.orderByDesc("ir_query_score");
+		sc.query();
+		var results = [];
+		while (sc.next()) {
+			if (!$sp.canReadRecord(sc))
+				continue;
+
+			var item = {};
+			$sp.getRecordDisplayValues(item, sc, 'name,price,sys_id');
+			item.category = sc.getValue('category');
+			results.push(item);
+		}
+		return results;
+	}
+	
+	function getPopularItems() {
+		var items = [];
+		var count = new GlideAggregate('sc_req_item');
+		count.addAggregate('COUNT','cat_item');
+		count.groupBy('cat_item');
+		count.addQuery('cat_item.sys_class_name', 'NOT IN', 'sc_cat_item_guide,sc_cat_item_wizard,sc_cat_item_content');
+		count.addQuery('cat_item.sc_catalogs', '0d08b13c3330100c8b837659bba8fb4');
+		count.orderByAggregate('COUNT', 'cat_item');
+		count.query();
+		while (count.next() && items.length < 9) {
+			if (!$sp.canReadRecord("sc_cat_item", count.cat_item.sys_id.getDisplayValue()))
+				continue; // user does not have permission to see this item
+
+			var item = {};
+			item.name = count.cat_item.name.getDisplayValue();
+			item.category = count.cat_item.category.toString();
+			item.price = count.cat_item.price.getDisplayValue();
+			item.sys_id = count.cat_item.sys_id.getDisplayValue();
+			items.push(item);
+		}
+		return items;
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-11 17:49:27</sys_created_on>
+        <sys_id>673b7a004f933300c09fb8de9310c75e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Quick Order</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sp_widget_673b7a004f933300c09fb8de9310c75e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-11 18:00:45</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-primary">
+  <div class="panel-heading">Request an item from the catalog</div>
+  <div class="panel-body">
+    <input class="form-control" type="search" placeholder="Start typing here to search the list of catalog items" ng-model="c.data.keywords" ng-change="c.server.update()" ng-model-options="{debounce: 250}" />
+    <h5 ng-if="!c.data.keywords">Showing the most popular items</h5>
+    <ul class="list-group result-container">
+      <li class="list-group-item" ng-repeat="item in c.data.items">
+        <a href>{{item.name}}</a><span class="pull-right">{{item.price}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="panel-footer" ng-if="c.data.keywords">
+    <ng-pluralize count="c.data.items.length"
+                 when="{'0': 'No items found for ',
+                     '1': 'One item matching ',
+                     'other': 'Found {} items matching '}">
+    </ng-pluralize>
+    {{c.data.keywords}}
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

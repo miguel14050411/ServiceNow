@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.crearPolos_include</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>crearPolos_include</name>
+        <script><![CDATA[var crearPolos_include = Class.create();
+crearPolos_include.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    
+crearPolos: function() {	 
+// inciio de codigo
+ var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'POST');
+ //r.setStringParameterNoEscape('persistencebackup', 'NONE');
+ //r.setStringParameterNoEscape('name', 'kevsancr2018');
+ //r.setStringParameterNoEscape('persistencetype', 'NONE');
+	var searchQuery = this.getParameter('sysparm_JSON_data'); //From this you will get value from Client script
+ 
+	r.setRequestBody(searchQuery);
+//var servername = document.getElementById("IO:259db362dbb7e30087d9d6aa48961907").value;  
+
+//override authentication profile 
+//authentication type ='basic'/ 'oauth2'
+//r.setAuthentication(authentication type, profile name);
+
+//set a MID server name if one wants to run the message on MID
+//r.setMIDServer('MY_MID_SERVER');
+
+//if the message is configured to communicate through ECC queue, either
+//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+//to true. Otherwise, one may get an intermittent error that the response body is null
+//r.setEccParameter('skip_sensor', true);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+	
+
+		
+		 
+		 return httpStatus;
+	
+     },
+
+    type: 'crearPolos_include'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-26 18:04:03</sys_created_on>
+        <sys_id>0cf5ccf6dbb7e30087d9d6aa48961977</sys_id>
+        <sys_mod_count>89</sys_mod_count>
+        <sys_name>crearPolos_include</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_0cf5ccf6dbb7e30087d9d6aa48961977</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-05 23:26:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

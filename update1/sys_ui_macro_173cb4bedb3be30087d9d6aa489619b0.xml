@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>MenuBCR</name>
+        <scoped_name>x_287988_bcr_app_MenuBCR</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-26 21:58:57</sys_created_on>
+        <sys_id>173cb4bedb3be30087d9d6aa489619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MenuBCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_173cb4bedb3be30087d9d6aa489619b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-26 21:58:57</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<button id="btn_Add" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="irAgregar();">Agregar Server </button>
+	
+	<button id="btn_Add" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="irVer();">Verificar Server </button>
+	
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function peProgressiveForm (peConcertinaManager, peFormManager, $scope, $location, i18n) {
+
+  var c = this;
+
+  if (c.data.mandatoryErrors === 0) {
+
+    c.data.messages.forEach(function (message) {
+      i18n.loadMessage(message.name, message.value);
+
+    });
+
+    c.forms = {
+      master: [c.data.forms.master],
+      children: c.data.forms.children
+    };
+
+    peFormManager.setActionName('delete', c.options.delete_action_name);
+    peFormManager.setActionName('insert', c.options.insert_action_name);
+    peFormManager.setActionName('update', c.options.update_action_name);
+
+    peFormManager.setReference('problem_id');
+
+    if (c.data.sysId !== '-1') {
+      peConcertinaManager.unlock('main');
+    }
+
+    peConcertinaManager.unlock('child');
+
+    /**
+     * Add a new child form
+     */
+    c.addChild = function () {
+      c.server.get({action: 'get_child_form', view: c.forms.master.view}).then(function(r) {
+        c.forms.children.forms.push(r.data.form);
+      });
+    };
+
+    /**
+     * Save all forms on the page
+     */
+    c.save = function () {
+      peConcertinaManager.closeAll('main');
+
+      peFormManager.save().then(function (sysId) {
+
+        if (c.options.redirect_to === '') {
+
+          $location.search('sys_id', sysId);
+
+          c.data.sysId = sysId;
+
+          c.server.update().then(function () {
+
+            peFormManager.reset();
+
+            c.forms.children = [];
+            c.forms.master = [];
+
+            c.forms.master = [c.data.forms.master];
+            c.forms.children = c.data.forms.children;
+
+          });
+
+        } else {
+          var search = $location.search();
+          search.id = c.options.redirect_to;
+          search.pf_table = c.forms.master[0].table;
+          search.pf_id = sysId;
+          search.sys_id = undefined;
+          $location.search(search).replace();
+        }
+      });
+    };
+  }
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$button-background: #757575 !default;&#13;
+$button-color: #fff !default;&#13;
+$button-hover-background: #3a3f51 !default;&#13;
+$button-hover-color: #fff !default;&#13;
+&#13;
+.pepf-header {&#13;
+  font-size: 20px;&#13;
+  margin: 40px 0 20px 0;&#13;
+}&#13;
+&#13;
+.pepf-body {&#13;
+  padding-bottom: 40px;&#13;
+}&#13;
+&#13;
+.pec-content {&#13;
+  border-radius: 10px;&#13;
+  background-color: #fafafa;&#13;
+  padding: 40px 20px 20px 20px;&#13;
+}&#13;
+&#13;
+.pec-wrap {&#13;
+  max-height: 0px;&#13;
+  overflow-y: hidden;&#13;
+}&#13;
+&#13;
+.pepf-actions {&#13;
+  padding: 20px;&#13;
+  text-align: center;&#13;
+  margin: 5px 0;&#13;
+&#13;
+&#13;
+  button {&#13;
+    border: 0;&#13;
+    padding: 10px 20px;&#13;
+    border-radius: 3px;&#13;
+    background-color: $button-background;&#13;
+    color: $button-color;&#13;
+    width: 250px;&#13;
+    box-sizing: border-box;&#13;
+    margin: 5px 0;&#13;
+&#13;
+    &amp;:hover {&#13;
+      background-color: $button-hover-background;&#13;
+      color: $button-hover-color;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .pepf-minor, .pec-minor {&#13;
+    background-color: white;&#13;
+    color: black;&#13;
+    border: 1px solid #757575;&#13;
+  }&#13;
+&#13;
+  .pepf-minor:hover, .pec-minor:hover {&#13;
+    background-color: $button-hover-background;&#13;
+    color: $button-hover-color;&#13;
+  }&#13;
+}&#13;
+&#13;
+.pec-section {&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.pec-child {&#13;
+  border-radius: 10px;&#13;
+  border: 1px solid #eee;&#13;
+  overflow: hidden;&#13;
+  margin-bottom: 10px;&#13;
+&#13;
+  h3 {&#13;
+    margin: 0;&#13;
+    border-radius: 7px 7px 0 0;&#13;
+    padding: 10px;&#13;
+    background-color: #eee;&#13;
+    font-size: 16px;&#13;
+  }&#13;
+&#13;
+  .pec-content {&#13;
+    padding: 10px;&#13;
+  }&#13;
+}&#13;
+&#13;
+.pec-parent {&#13;
+&#13;
+  position: relative;&#13;
+&#13;
+  padding-top: 35px;&#13;
+  padding-left: 7px;&#13;
+  margin-top: 20px;&#13;
+  margin-bottom: 20px;&#13;
+&#13;
+  &amp; &gt; .pec-head {&#13;
+    position: absolute;&#13;
+    top: 10px;&#13;
+    left: 0;&#13;
+    background-color: #eee;&#13;
+    border: 1px solid #ddd;&#13;
+    padding: 7px 20px 7px 7px;&#13;
+    border-radius: 30px;&#13;
+    cursor: pointer;&#13;
+    display: inline-block;&#13;
+    z-index: 10;&#13;
+&#13;
+    .pec-num {&#13;
+      width: 32px;&#13;
+      height: 32px;&#13;
+      line-height: 32px;&#13;
+      border-radius: 16px;&#13;
+      text-align: center;&#13;
+      background-color: $button-background;&#13;
+      color: $button-color;&#13;
+      float: left;&#13;
+      margin-right: 10px;&#13;
+    }&#13;
+    h2 {&#13;
+      font-size: 16px;&#13;
+      line-height: 32px;&#13;
+      float: left;&#13;
+      margin: 0;&#13;
+      min-width: 150px;&#13;
+    }&#13;
+  }&#13;
+}&#13;
+&#13;
+&#13;
+pe-concertina-section legend {&#13;
+  display: none;&#13;
+}&#13;
+&#13;
+.pec-edit {&#13;
+  height: 20px;&#13;
+  border-radius: 10px;&#13;
+  text-align: center;&#13;
+  background-color: $button-background;&#13;
+  color: $button-color;&#13;
+  float: left;&#13;
+  padding: 0 15px;&#13;
+  margin-top: 6px;&#13;
+  font-size: 12px;&#13;
+  line-height: 20px;&#13;
+  margin-left: 15px;&#13;
+}&#13;
+&#13;
+.pec-head:hover .pec-edit {&#13;
+  background-color: $button-hover-background;&#13;
+  color: $button-hover-color;&#13;
+}&#13;
+&#13;
+.pec-inactive {&#13;
+  opacity: 0.5;&#13;
+&#13;
+  .pec-head {&#13;
+    cursor: default;&#13;
+  }&#13;
+&#13;
+  .pec-edit {&#13;
+    visibility: hidden;&#13;
+  }&#13;
+}&#13;
+&#13;
+.pec-delete {&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+  right: 15px;&#13;
+  font-size: 25px;&#13;
+  line-height: 38px;&#13;
+&#13;
+  &amp;:hover{&#13;
+    color: rgb(206,28,32);&#13;
+  }&#13;
+}&#13;
+&#13;
+.pec-to-delete {&#13;
+  color: rgb(206,28,32);&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>widgetCumstomKevsan</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp) {
+
+  var widgetInstance = $sp.getValue("sys_id");
+  var view = options.view || 'service_portal';
+
+  /**
+   * Ensure we've been supplied with all the necessary options for the widget to work
+   */
+
+  data.mandatoryErrors = 0;
+
+  if (!options.master)
+    showMandatoryError("master");
+
+  if (!options.child)
+    showMandatoryError("child");
+
+  if (!options.reference)
+    showMandatoryError("reference");
+
+  if (data.mandatoryErrors > 0)
+    return false;
+
+  function showMandatoryError (fieldName) {
+    gs.addErrorMessage(gs.getMessage('Mandatory field "{0}" not set for instance "{1}".', [fieldName, widgetInstance]));
+    data.mandatoryErrors++;
+  }
+
+  if (input) {
+    data.sysId = input.sysId;
+  } else {
+    data.sysId = $sp.getParameter("sys_id") || '-1';
+  }
+
+  data.messages = [];
+  data.messages.push({
+    name: 'Please complete all mandatory fields before submitting',
+    value: gs.getMessage('Please complete all mandatory fields before submitting')
+  });
+
+
+  /**
+   * Get the actual table names (the reference fields in the options will be the sysId of a 'sys_db_object' record)
+   */
+
+  var master = new GlideRecord('sys_db_object');
+  master.get(options.master);
+
+  var child  = new GlideRecord('sys_db_object');
+  child.get(options.child);
+
+
+  /**
+   * Maybe we're just requesting a single child form?
+   */
+
+  if (input && input.action === 'get_child_form') {
+    input.view = input.view || view;
+    data.form = $sp.getForm(child.getValue('name'), '-1', null, input.view);
+    return;
+  }
+
+
+  /**
+   * Get the progressive form model from the script include
+   */
+
+  var pfh = new PeProgressiveFormHelper($sp);
+  pfh.setMaster(master.getValue('name'));
+  pfh.setView(view);
+  pfh.setChild(child.getValue('name'), options.reference);
+  data.forms = pfh.get(data.sysId);
+
+})($sp);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-10 17:44:13</sys_created_on>
+        <sys_id>30b642b54f2e7300c09fb8de9310c79c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>widgetCumstomKevsan</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sp_widget_30b642b54f2e7300c09fb8de9310c79c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-10 17:44:13</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+  <div ng-if="c.data.mandatoryErrors === 0">
+    <div class="pepf-header">
+        <span ng-if="c.data.forms.master.display_value === ''">NEW</span> {{c.data.forms.master.label}}
+        <span ng-if="c.data.forms.master.display_value != ''"> - {{c.data.forms.master.display_value}}</span>
+    </div>
+    <div class="pepf-body">
+        <sp-model pe-concertina-form
+                  pef-master="true"
+                  form-model="form"
+                  template-url="pec-form"
+                  mandatory="true" ng-repeat="form in c.forms.master"></sp-model>
+        <div pe-concertina pec-title="{{::c.forms.children.plural}}" pec-ns="main">
+            <div ng-repeat="form in c.forms.children.forms">
+                <div pe-concertina
+                     pec-ns="child"
+                     pec-expanded="false"
+                     pec-template-url="pec-child"
+                     pec-title="{{::form.display_value || form.label}}"
+                     pec-show-delete="{{false}}">
+                    <sp-model pe-concertina-form form-model="form" mandatory="true"></sp-model>
+                </div>
+            </div>
+            <div ng-if="c.forms.children.forms.length === 0">
+                <div class="alert alert-info">There are no {{::c.forms.children.plural.toLowerCase()}} related to this record.</div>
+            </div>
+            <div class="pepf-actions">
+                <button class="pepf-minor" ng-click="c.addChild()">Create {{::c.forms.children.singular}}</button>
+                <button ng-click="c.save()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.cmdb_1</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>cmdb_1</name>
+        <script><![CDATA[var cmdb_1 = Class.create();
+cmdb_1.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	
+	scall_incidents_kev: function(){
+		
+	// crear un array y pasarlo en estructura json para que en el cliente lo pueda resolver	
+		
+var gr = new GlideRecord('incident'); //Indicate the table to query from
+//The 'addQuery' line allows you to restrict the query to the field/value pairs specified (optional)
+//gr.addQuery('active', true);
+gr.query(); //Execute the query
+while (gr.next()) { //While the recordset contains records, iterate through them
+   //Do something with the records returned
+   if(gr.category){
+	   //mandarlo en un json
+gs.info('la categoria es is ' + gr.category);
+
+}
+      
+   
+}
+		return gr.category;
+	},
+
+    type: 'cmdb_1'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 04:04:46</sys_created_on>
+        <sys_id>e512519ddb02b3002ca60d53ca96197d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>cmdb_1</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_e512519ddb02b3002ca60d53ca96197d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-14 05:28:49</sys_updated_on>
+    </sys_script_include>
+</record_update>

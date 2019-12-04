@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>Configuration for service group resource.&#13;
+</description>
+        <media_type/>
+        <name>CreateServiceGroups</name>
+        <scoped_name>x_287988_bcr_app_CreateServiceGroups</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-05 20:01:40</sys_created_on>
+        <sys_id>0ae3acc1db80330087d9d6aa489619d5</sys_id>
+        <sys_mod_count>190</sys_mod_count>
+        <sys_name>CreateServiceGroups</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_0ae3acc1db80330087d9d6aa489619d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-29 21:47:42</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">	
+	
+	<div id="nuevoscampos"></div>
+	
+	
+	<script>
+		
+//*********************************************************************************************
+		
+		// VER SERVICE POOLS
+		var myObj = "";
+	debugger;
+		var ga = new GlideAjax('verificarPoolsName');
+		ga.addParam('sysparm_name', 'VerificarFunct');
+		//ga.addParam('sysparm_JSON_data',jsonStructure);
+		
+		ga.getXML(HelloWorldParse); 
+		
+		function HelloWorldParse(response) {
+		debugger;
+		var answer1 =  response.responseXML.documentElement.getAttribute("answer");
+		//alert(answer1);
+		console.log("*******************************************************");
+		//var obj = answer1.replace(/\\/g, "");
+		//console.log(obj);
+		
+		// start by defining the html table with desired style...
+
+	var strTable = '<table id="table" style="align:center; border-collapse: collapse;" class='table table-dark'>';
+		
+		
+		// add header rows
+
+		strTable += '<tr class="ng-scope"><th>Resource Group Name</th><th>Protocol</th><th>Effective State</th><th>Status</th></tr>';
+		// parse JSON and put results into table
+
+		var parsedResults = JSON.parse(answer1).servicegroup;
+		alert(parsedResults);
+		
+		for (var i = 0; i &lt; parsedResults.length; i++) {
+
+         strTable += '<tr class="table-row">';
+
+         strTable += '<td>' + parsedResults[i].servicegroupname + '</td>';
+
+         strTable += '<td >' + parsedResults[i].servicetype + '</td>';
+
+         strTable += '<td>' + parsedResults[i].servicegroupeffectivestate + '</td>';
+
+         strTable += '<td>' + parsedResults[i].state + '</td>';
+
+         strTable += '</tr>';
+}         	
+strTable += '</table>';		
+// then set value to the dynamic table string
+
+g_form.setValue('variable', strTable);
+		$j('#demo').append(strTable);
+		
+			}//fin function principal
+//***************************************************************************************************		
+		$j( "#btn_Add" ).click(function() {
+  alert( "Handler for .click() called." );
+});	
+
+//****************************INICIO DE LA FUNCION***************************************************************
+$j( "#CrearServiceGroup" ).click(function() {
+		
+		//alert("Este es el formulario de Crear Grupos de Servicios Traffic Managment");
+		//debugger;
+		//VARIABLES PARA CREACION DE SERVICE GROUP
+		var servicegroupname = document.getElementById("IO:b57ef7f4db00330087d9d6aa48961916").value;
+		var servicetype = document.getElementById("IO:d9defbf4db00330087d9d6aa489619c1").value;
+		var cachetype = document.getElementById("IO:e5b19085db40330087d9d6aa489619fa").value;
+		//OPTIONS
+		var cacheableBox = document.getElementById("IO:1513dcc5db40330087d9d6aa48961922").value; 
+		var stateBox = document.getElementById("IO:aa93d009db40330087d9d6aa48961964").value;
+		var healthMonitoringBox = document.getElementById("IO:18145049db40330087d9d6aa48961923").value;
+		var appflowLogginBox = document.getElementById("IO:5634d049db40330087d9d6aa489619e9").value;
+		//++variables de los servidores
+		var serverNameValue = document.getElementById("firstServer-01").value;
+		var serverNameValueIP = document.getElementById("firstIP01").value;
+//*********************************CREAR SERVICE-GROUP**********************************************************
+		var jsonStructure = JSON.stringify({
+    "servicegroup": {
+        "servicegroupname": servicegroupname ,
+        "servicetype": servicetype,
+        "cachetype": cachetype,
+		"state": "ENABLED"
+    }
+});	
+		var ga = new GlideAjax('ServiceGroupLBL');
+		ga.addParam('sysparm_name', 'crearServiceGroups');
+		ga.addParam('sysparm_JSON_data',jsonStructure);
+		
+		ga.getXML(HelloWorldParse); 
+	
+function HelloWorldParse(response) {
+		//debugger;
+		var answer1 =  response.responseXML.documentElement.getAttribute("answer");
+			}
+//*****************************CREAR SERVER**************************************************************
+		debugger;
+		var getDOM = document.getElementById('nuevoscampos').innerHTML;
+        var getForms = $j(getDOM);
+		alert("Aceptando Datos Por favor espere");
+        for(var i = 0; i &lt; getForms.length; i++){
+        debugger;
+        //grupo 1
+        var firstPosition = getForms[i].innerHTML;// aqui obtengo el div en string
+        var getValue = $j(firstPosition);// aqui escojo los grupos
+        var getInnerValue = getValue[0].innerHTML;
+        var getResult = $j(getInnerValue);
+        var idValue = getResult[1].id;
+        var ServeNameParam = document.getElementById(idValue).value;
+    
+		//grupo 2 
+		var getValue2 = $j(firstPosition);// aqui escojo los grupos
+        var getInnerValue2 = getValue2[1].innerHTML;
+        var getResult2 = $j(getInnerValue2);
+        var idValue2 = getResult2[1].id;
+        var ipAddressparam = document.getElementById(idValue2).value;
+		//aqui va el llamado del JSON para crear servers
+        var jsonStructureCreateServer = JSON.stringify({
+        
+	"server": {
+		"name": ServeNameParam,
+		"ipaddress": ipAddressparam
+	}
+
+});
+		//aqui va el llamado del GlideAjax
+		var ga = new GlideAjax('CrearServerVPX');
+        ga.addParam('sysparm_name', 'llamdadoServer');
+        ga.addParam('sysparm_JSON_dataServerCreated',jsonStructureCreateServer);
+		
+        ga.getXML(CallServerFunct); 
+        
+ function CallServerFunct(response) {
+        //debugger;
+         var answer2 =  response.responseXML.documentElement.getAttribute("answer");
+        alert(answer2);
+                
+                        }
+//**************AQUI VA EL BINDING DE LOS SERVER A LOS SERVICEGROUP POR CADA vs	******************************
+		var jsonStructureBinding = JSON.stringify({
+	
+	"servicegroup_servicegroupmember_binding": {
+		"servicegroupname": servicegroupname,
+		"servername": ServeNameParam,
+		"hashid": "1",
+		"port": "80"
+	}
+
+});
+		alert("Aqui empieza el llamodo del binding");	
+		
+		var ga = new GlideAjax('servicegroupmember_binding_Script');
+		ga.addParam('sysparm_name', 'servicegroupmember_binding_func');
+		ga.addParam('sysparm_JSON_bindVirtualServerToPools',jsonStructureBinding);
+		
+		ga.getXML(bindServiceGroupMember); 
+		
+function bindServiceGroupMember(responseValue) {
+		debugger;
+		//alert("Aqui empieza el llamodo del binding");
+		debugger;
+		var answer3 =  responseValue.responseXML.documentElement.getAttribute("answer");
+		//alert(answer3);
+			}	
+        }// fin del LOOP for
+		alert("la función se ha realizado con exito");
+	});
+		
+//*************************************************************************
+</script>
+	
+<style>
+			
+.success td
+{
+    background-color:red !important;
+}
+	</style>
+		
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

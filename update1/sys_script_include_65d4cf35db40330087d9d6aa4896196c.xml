@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_287988_bcr_app.verificarPoolsName</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>verificarPoolsName</name>
+        <script><![CDATA[var verificarPoolsName = Class.create();
+verificarPoolsName.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	VerificarFunct: function(){
+		
+ var r = new sn_ws.RESTMessageV2('x_287988_bcr_app.BCRmessage', 'Verificar Service Pools');
+		
+//override authentication profile 
+//authentication type ='basic'/ 'oauth2'
+//r.setAuthentication(authentication type, profile name);
+
+//set a MID server name if one wants to run the message on MID
+//r.setMIDServer('MY_MID_SERVER');
+//var searchQuery = this.getParameter('sysparm_JSON_VerificarPools');
+//r.setRequestBody(searchQuery);
+//if the message is configured to communicate through ECC queue, either
+//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+//to true. Otherwise, one may get an intermittent error that the response body is null
+//r.setEccParameter('skip_sensor', true);
+		
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+ var finalData = responseBody.replace(/\\/g, "");
+		
+		return finalData;
+		
+	},
+	
+    type: 'verificarPoolsName'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-08 15:39:23</sys_created_on>
+        <sys_id>65d4cf35db40330087d9d6aa4896196c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>verificarPoolsName</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_script_include_65d4cf35db40330087d9d6aa4896196c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-08 16:35:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

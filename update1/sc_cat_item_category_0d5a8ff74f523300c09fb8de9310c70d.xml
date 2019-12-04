@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="MostrarMonitorSalud">412ac33b4f523300c09fb8de9310c7d7</sc_cat_item>
+        <sc_category display_value="categoria de Solicitud de Telecomunicaciones ">a913ed08db3133002ca60d53ca9619ff</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-04 17:29:47</sys_created_on>
+        <sys_id>0d5a8ff74f523300c09fb8de9310c70d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>categoria de Solicitud de Telecomunicaciones .MostrarMonitorSalud</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sc_cat_item_category_0d5a8ff74f523300c09fb8de9310c70d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-04 17:29:47</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

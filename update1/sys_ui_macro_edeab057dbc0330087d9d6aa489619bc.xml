@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>EliminarPools</name>
+        <scoped_name>x_287988_bcr_app_EliminarPools</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-12 21:25:07</sys_created_on>
+        <sys_id>edeab057dbc0330087d9d6aa489619bc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>EliminarPools</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_edeab057dbc0330087d9d6aa489619bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-29 15:51:07</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+
+		<button id="btn_Add" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="removeServer();"> Eliminar </button>
+	
+	
+	<script>
+		
+//************************BIND SERVICE GROUP*******************************************
+		
+		var gaa = new GlideAjax('verificarPoolsName');
+		gaa.addParam('sysparm_name', 'VerificarFunct');
+		
+		gaa.getXML(HelloWorldParseKevsan); 
+		
+		function HelloWorldParseKevsan(responsekev) {
+		
+		var reponseScriptKev =  responsekev.responseXML.documentElement.getAttribute("answer");
+		var obj53 = reponseScriptKev.replace(/\\/g, "");
+		//convertirlo a un objeto
+		
+		//llenar el select box	
+		var selectDropDown = document.getElementById("IO:7e7cb897dbc0330087d9d6aa48961953");
+
+		var parsedResults2 = JSON.parse(obj53).servicegroup;
+		
+		for(var i = 0; i &lt; parsedResults2.length; i++){
+		debugger;
+		//var name = parsedResults2[i].servicegroupname;
+ 
+		var option = document.createElement("OPTION");
+ 
+                //Set Customer Name in Text part.
+                option.innerHTML = parsedResults2[i].servicegroupname;
+
+                //Add the Option element to DropDownList.
+                selectDropDown.options.add(option);
+     
+		}//finished for 
+			
+		
+	}
+//******************************************************************************************************************************	
+	function removeServer(){
+		
+		
+		//Eliminar Virtual Server
+		debugger;
+		var paramValue = document.getElementById("IO:7e7cb897dbc0330087d9d6aa48961953").value;
+		
+		var ga = new GlideAjax('EliminarPools');
+		ga.addParam('sysparm_name', 'removepools');
+		ga.addParam('sysparm_JSON_data',paramValue);
+		
+		ga.getXML(HelloWorldParse); 
+		
+		function HelloWorldParse(response) {
+		debugger;
+		var obj =  response.responseXML.documentElement.getAttribute("answer");
+		alert(obj);
+		//var obj = answer1.replace(/\\/g, "");
+		//console.log(obj);
+		}
+	}
+
+	</script>
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

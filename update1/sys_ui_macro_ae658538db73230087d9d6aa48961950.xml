@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>submitBCR</name>
+        <scoped_name>x_287988_bcr_app_submitBCR</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-20 17:31:00</sys_created_on>
+        <sys_id>ae658538db73230087d9d6aa48961950</sys_id>
+        <sys_mod_count>280</sys_mod_count>
+        <sys_name>submitBCR</sys_name>
+        <sys_package display_value="BCR_APP" source="x_287988_bcr_app">28f3b438db33230087d9d6aa48961993</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BCR_APP">28f3b438db33230087d9d6aa48961993</sys_scope>
+        <sys_update_name>sys_ui_macro_ae658538db73230087d9d6aa48961950</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-26 21:36:11</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<button id="btn_view" class="request_catalog_button_with_icon btn cat-btn btn-primary" onClick="submitBCR();">View Servers </button>
+	
+	
+	<link rel="stylesheet" scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+  <script>https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<html>
+
+<head></head>
+
+<body>
+<br/><br/>
+	<br/><br/>
+	
+	
+
+	
+	
+<div class="jumbotron" style="color-backgournd:red !important" >
+
+          <p align="center" class="text-info"><b> <blink> <b class="text-uppercase"></b>DATASYS Group </blink></b></p>
+
+<div class="checkbox" align="center" >
+
+<label><input type="checkbox" name="userAvail" checked="checked" onclick="thisWorks(checked)" ><b>User Availability</b><title>Please uncheck the checkbox while you are leaving</title></input></label>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+	
+	
+	
+	
+	
+	
+	
+	<script>
+		
+		function addFunc(){
+		
+		window.open('https://dev58978.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Dcbe470b8db33230087d9d6aa48961929%26sysparm_link_parent%3D88d430b8db33230087d9d6aa48961957%26sysparm_catalog%3D85143078db33230087d9d6aa48961957%26sysparm_catalog_view%3Dcatalog_bcr_catalogo_kevsan%26sysparm_view%3Dcatalogs_default');
+		
+		}
+		
+		
+		
+		
+		
+		
+		function submitBCR(){
+		
+		var ga = new GlideAjax('BCR_Submit');
+		ga.addParam('sysparm_name', 'helloWorld');
+		//ga.addParam('sysparm_user_name', "bob");
+		ga.getXML(HelloWorldParse); 
+		
+		
+		function HelloWorldParse(response) {
+		debugger;
+		var answer =  response.responseXML.documentElement.getAttribute("answer");
+		alert(answer);
+		
+			}
+		}
+		
+		</script>
+	
+</j:jelly>
+]]></xml>
+    </sys_ui_macro>
+</record_update>
